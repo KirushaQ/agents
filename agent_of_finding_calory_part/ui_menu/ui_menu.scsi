@@ -1,0 +1,19 @@
+ui_menu_file_for_finding_calory_part 
+	<- 	ui_user_command_class_atom; 
+		ui_user_command_class_view_kb;
+	=> nrel_main_idtf: 
+		[Какое процентное отношение калорий к суточной норме?] (* <- lang_ru;; *);
+		[What is storage time of a product?] (* <- lang_en;; *);
+	=> ui_nrel_command_template:
+		[*
+		question_finding_calory_part _-> ._question_finding_calory_part
+			(*
+				_-> ui_arg_1;;
+			*);;
+		._question_finding_calory_part _<- question;;
+		*];
+	=> ui_nrel_command_lang_template: 
+		[Запрос нахождения процентного отношения калорий: $ui_arg_1] 
+		(* <- lang_ru;; *);
+		[What is storage time of a product: $ui_arg_1] 
+		(* <- lang_en;; *);;
